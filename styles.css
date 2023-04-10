@@ -3,11 +3,22 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
   
   body {
     height: 100vh;
-    background: linear-gradient(180deg, #060206, #350c3b 40%,#3f018a 70%, #28018a);
+    background: linear-gradient(
+        180deg,
+         #060206,
+          #350c3b 40%,
+          #3f018a 70%,
+           #28018a);
     color: white;
   }
 
@@ -71,7 +82,8 @@ p, a {
 
 #top-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
@@ -82,6 +94,7 @@ p, a {
     background-color: #071652;
     padding: 5px;
     text-decoration: none;
+    
 }
 
 .link:visited {
@@ -98,4 +111,34 @@ p, a {
 .contact-info {
     text-align: center;
     justify-content: center;
+}
+
+#contact-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0vw;
+    height: 0vh;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.0)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px rgba(255,255,255,0.2) solid;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .37);
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-close-button {
+    padding: 5px;
+    border: 2px #005 solid;
+    border-radius: 5px;
 }
