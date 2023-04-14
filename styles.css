@@ -35,6 +35,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
     
 }
 
@@ -61,31 +62,86 @@ html, body {
 }
 
 #certs .cert {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 15px;
-    background-color: white;
-    margin: 5rem 10rem;
-    color:black;
-    text-align: center;
+    scale: 50%;
+    justify-content: center;
 }
 
 #projects {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 90%;
+    aspect-ratio: 16/9;
     margin-top: 5rem;
+    background-color: #eee;
+    border-radius: 1rem;
+    margin: 0 auto;
 }
 
-#projects .project {
-    width: 20rem;
-    height: 30rem;
-    border-radius: 15px;
-    background-color: white;
-    color:black;
-    text-align: center;
-    justify-content: space-evenly;
+#circle-bar {
+    width: 100%;
+    height: 5%;
+    background-color: #ccc;
+    border-radius:  1rem 1rem 0 0;
 }
+
+.circles {
+    display: inline-block;
+    width: 1%;
+    margin-left: 5px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    position: relative;
+    top: 30%;
+    left: 1%;
+}
+
+#circle-1 {
+    background-color: #ED594A;
+}
+#circle-2 {
+    background-color: #FDD800;
+}
+#circle-3 {
+    background-color: #5AC05A;
+}
+
+#tab-bar {
+    width: 100%;
+    height: 5%;
+    background-color: #ccc;
+}
+
+.tab {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75%;
+    width: 25%;
+    background-color: #ccc;
+    /* border: 2px solid #999; */
+    /* border-radius: 5px; */
+    margin-left: .25%;
+    color:black;
+    text-align: left;
+    border: 2px solid gray;
+    border-radius: 5px;
+    transition: background ease 150ms;
+}
+
+#projects-container {
+    border: 1px solid red;
+    width: 95%;
+    height: 90%;
+}
+
+.project-window {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    border: 1px solid lime;
+    display: none;
+    height: 100%;
+    border-radius: 1rem;
+}
+
 
 .contact {
     background-color: rgba(255, 255, 255, .1);
@@ -95,23 +151,6 @@ html, body {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-}
-
-#sprites {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top:100px;
-    background-color: rgba(255, 255, 255, .3);
-    padding: 20px;
-    border-radius: 30px;
-}
-
-#sprites .sprite {
-    font-size: 1.5rem;
-    background-color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
 }
 
 .flex {
