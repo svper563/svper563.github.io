@@ -59,13 +59,18 @@ html, body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     flex-wrap: wrap;
 }
 
 .cert {
     width: 200px;
     height: 200px;
+    min-width: 150px;
+    min-height: 150px;
     overflow: hidden;
 }
 
@@ -171,14 +176,18 @@ html, body {
 }
 
 .icons > * {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
+    min-width: 65px;
+    min-height: 65px;
 }
-
+/* 
 .icon {
-    width: 65px;
-    height: 65px;
-}
+    width: 80px;
+    height: 80px;
+    min-width: 65px;
+    min-height: 65px;
+} */
 
 .name-header {
     /* font-size: 1rem; */
