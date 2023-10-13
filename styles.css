@@ -11,13 +11,23 @@ html, body {
     -o-user-select: none;
     user-select: none;
     font-family: 'IBM Plex Mono', monospace;
-    background: linear-gradient(
-        to bottom,
-         #060206,
-          #350c3b 40%,
-          #3f018a 70%,
-           #28018a);
     color: white;
+    background-color: black;
+  }
+
+  .sky {
+    background: linear-gradient(
+      to bottom,
+       #060206,
+        #350c3b 40%,
+        #3f018a 70%,
+         #28018a);
+    padding-bottom: .25rem;
+  }
+
+  .land {
+    background-color: black;
+    padding-top: 5rem;
   }
 
 #header {
@@ -210,7 +220,7 @@ a:visited {
   }
   
   .glitch {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
@@ -293,6 +303,45 @@ a:visited {
         0.025em .05em 0 rgba(0, 0, 255, .75);
     }
   }
+
+  .moon {
+    display:flex;
+    content: none;
+    background-color: black;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 0px 0px #fff;
+    padding: 2rem;
+    margin-top:5rem;
+  }
+
+  .zigzag-line {
+    position: relative;
+    width: 200px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    background-color: black; /* Line color */
+}
+
+.zigzag-line::before, .zigzag-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%; /* Adjust the zigzag width */
+    height: 5rem;
+    background-color: black; /* Line color */
+    transform: skewX(30deg); 
+}
+
+.zigzag-line::before {
+    left: -5px;
+}
+
+.zigzag-line::after {
+    right: -5px;
+}
   
   @media (prefers-reduced-motion: reduce) {
     *,
