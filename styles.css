@@ -21,6 +21,12 @@ html, body {
     position: relative;
 }
 
+footer {
+  position: relative;
+  background-color: black;
+  color: gray;
+}
+
   .sky {
     background: linear-gradient(
       to bottom,
@@ -79,6 +85,14 @@ html, body {
     background-color: black;
     z-index:4;
     padding: 1rem 0rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    color: gray;
+    font-style: italic;
   }
 
 #header {
