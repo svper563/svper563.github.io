@@ -1,6 +1,11 @@
+:root {
+  --glitch-duration-1: 375ms;
+  --glitch-duration-2: 400ms;
+  --glitch-duration-3: 450ms;
+}
+
 html, body {
     min-width: 300px;
-    /* min-height: 100%; */
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -82,7 +87,6 @@ html, body {
     align-items: center;
     font-size: 2rem;
     text-align: center;
-    /* background-color: rgba(255, 255, 255, .25); */
     border-radius: 50px;
     margin: 2% 10%;
 
@@ -103,14 +107,6 @@ html, body {
     text-align: justify;
     
 }
-
-/* #bio .image {
-    background-color: white;
-    min-width: 10rem;
-    margin-left: 50px;
-    aspect-ratio: 1;
-    border-radius: 100%;
-} */
 
 .certs {
     display: flex;
@@ -134,81 +130,6 @@ html, body {
 .cert img {
     max-width: 100%;
     max-height: 100%;
-}
-#projects {
-    width: 90%;
-    aspect-ratio: 16/9;
-    margin-top: 5rem;
-    background-color: #eee;
-    border-radius: 1rem;
-    margin: 0 auto;
-}
-
-#circle-bar {
-    width: 100%;
-    height: 5%;
-    background-color: #ccc;
-    border-radius:  1rem 1rem 0 0;
-}
-
-.circles {
-    display: inline-block;
-    width: 1%;
-    margin-left: 5px;
-    aspect-ratio: 1;
-    border-radius: 100%;
-    position: relative;
-    top: 30%;
-    left: 1%;
-}
-
-#circle-1 {
-    background-color: #ED594A;
-}
-#circle-2 {
-    background-color: #FDD800;
-}
-#circle-3 {
-    background-color: #5AC05A;
-}
-
-#tab-bar {
-    width: 100%;
-    height: 5%;
-    background-color: #ccc;
-}
-
-.tab {
-    display: inline-flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 75%;
-    width: 25%;
-    background-color: #ccc;
-    /* border: 2px solid #999; */
-    /* border-radius: 5px; */
-    margin-left: .25%;
-    color:black;
-    text-align: left;
-    border: 2px solid gray;
-    border-radius: 5px;
-    transition: background ease 150ms;
-}
-
-#projects-container {
-    border: 1px solid red;
-    width: 95%;
-    height: 90%;
-}
-
-.project-window {
-    color: black;
-    font-size: 3rem;
-    text-align: center;
-    border: 1px solid lime;
-    display: none;
-    height: 100%;
-    border-radius: 1rem;
 }
 
 
@@ -247,7 +168,6 @@ html, body {
 }
 
 .name-header {
-    /* font-size: 1rem; */
     text-align: center;
 }
 
@@ -259,47 +179,42 @@ a:visited {
     color: white;
 }
 
-:root {
-    --glitch-duration-1: 375ms;
-    --glitch-duration-2: 400ms;
-    --glitch-duration-3: 450ms;
-  }
   
-  .glitch {
-    font-size: 4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    position: relative;
-    
-    text-shadow:
-        0.05em 0 0 rgba(255, 0, 0, .75),
-        -0.025em -.05em 0 rgba(0, 255, 0, .75),
-        0.025em .05em 0 rgba(0, 0, 255, .75);
-    
-    animation: glitch var(--glitch-duration-1) infinite;
-  }
+.glitch {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
   
-  .glitch span {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  text-shadow:
+      0.05em 0 0 rgba(255, 0, 0, .75),
+      -0.025em -.05em 0 rgba(0, 255, 0, .75),
+      0.025em .05em 0 rgba(0, 0, 255, .75);
   
-  .glitch span:first-child {
-    animation: glitch var(--glitch-duration-2) infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 50%);
-    transform: translate(-.025em, -0.03em);
-    opacity: 0.8;
-  }
+  animation: glitch var(--glitch-duration-1) infinite;
+}
   
-  .glitch span:last-child {
-    animation: glitch var(--glitch-duration-3) infinite;
-    clip-path: polygon(0 55%, 100% 45%, 100% 100%, 0 100%);
-    transform: translate(-.02em, 0.03em);
-    opacity: 0.8;
-  }
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  @keyframes move-twink-back {
+.glitch span:first-child {
+  animation: glitch var(--glitch-duration-2) infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 50%);
+  transform: translate(-.025em, -0.03em);
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch var(--glitch-duration-3) infinite;
+  clip-path: polygon(0 55%, 100% 45%, 100% 100%, 0 100%);
+  transform: translate(-.02em, 0.03em);
+  opacity: 0.8;
+}
+
+@keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
@@ -316,7 +231,7 @@ a:visited {
     to {background-position:-10000px 5000px;}
 }
   
-  @keyframes glitch {
+@keyframes glitch {
     0% {
       text-shadow:
         0.05em 0 0 rgba(255, 0, 0, .75),
