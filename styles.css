@@ -49,12 +49,12 @@ footer {
   }
 
   .stars {
-    background:#ffffff00 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    background:#ffffff00 url(./media/stars.png) repeat top center;
     z-index:0;
   }
 
   .twinkling{
-    background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    background:transparent url(./media/twinkling.png) repeat top center;
     z-index:0;
   
     -moz-animation:move-twink-back 200s linear infinite;
